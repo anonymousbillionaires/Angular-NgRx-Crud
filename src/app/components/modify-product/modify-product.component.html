@@ -1,0 +1,34 @@
+<mat-card class="card">
+    <mat-card-header class="header">
+      <mat-card-title><h2 style="color: black">Modify Product</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="form" [formGroup]="modifyProductForm" (ngSubmit)="onSubmit(modifyProductForm)">
+        <mat-form-field class="full-width">
+            <mat-label>ID</mat-label>
+            <input formControlName="id" matInput placeholder="ID">
+          </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Name</mat-label>
+          <input formControlName="name" matInput placeholder="Name">
+        </mat-form-field>
+  
+        <mat-form-field class="full-width">
+          <mat-label>Quantity</mat-label>
+          <input formControlName="quantity" matInput placeholder="Quantity">
+        </mat-form-field>
+  
+        <mat-form-field class="full-width">
+          <mat-label>Price</mat-label>
+          <input formControlName="price" matInput placeholder="Price">
+        </mat-form-field>
+      
+        <mat-form-field class="full-width">
+          <mat-label>Observation</mat-label>
+          <textarea formControlName="observation" matInput placeholder="Observation"></textarea>
+        </mat-form-field>
+  
+        <button mat-raised-button type="submit">Submit</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
